@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager — PowerBackup Guide</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main',
+        },
+        media_folder: 'public/images',
+        public_folder: '/images',
+        locale: 'uk',
+
+        collections: [
+          {
+            name: 'guides_uk',
+            label: 'Гайди (UK)',
+            folder: 'src/content/uk/guides',
+            create: true,
+            slug: '{{slug}}',
+            extension: 'mdx',
+            format: 'frontmatter',
+            fields: [
+              { label: 'Заголовок', name: 'title', widget: 'string' },
+              { label: 'Опис', name: 'description', widget: 'text' },
+              { label: 'Дата публікації', name: 'date', widget: 'datetime' },
+              { label: 'Автор', name: 'author', widget: 'string', default: 'Редакція PowerBackup Guide' },
+              { label: 'Категорія', name: 'category', widget: 'hidden', default: 'guide' },
+              { label: 'Locale', name: 'locale', widget: 'hidden', default: 'uk' },
+              { label: 'Теги', name: 'tags', widget: 'list' },
+              {
+                label: 'Джерела',
+                name: 'sources',
+                widget: 'list',
+                fields: [
+                  { label: 'Назва джерела', name: 'text', widget: 'string' },
+                  { label: 'URL', name: 'url', widget: 'string' },
+                  { label: 'Дата перевірки', name: 'accessed', widget: 'string' },
+                ],
+              },
+              { label: 'Контент', name: 'body', widget: 'markdown' },
+            ],
+          },
+          {
+            name: 'guides_en',
+            label: 'Guides (EN)',
+            folder: 'src/content/en/guides',
+            create: true,
+            slug: '{{slug}}',
+            extension: 'mdx',
+            format: 'frontmatter',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'text' },
+              { label: 'Date', name: 'date', widget: 'datetime' },
+              { label: 'Author', name: 'author', widget: 'string', default: 'PowerBackup Guide Editorial' },
+              { label: 'Category', name: 'category', widget: 'hidden', default: 'guide' },
+              { label: 'Locale', name: 'locale', widget: 'hidden', default: 'en' },
+              { label: 'Tags', name: 'tags', widget: 'list' },
+              {
+                label: 'Sources',
+                name: 'sources',
+                widget: 'list',
+                fields: [
+                  { label: 'Source title', name: 'text', widget: 'string' },
+                  { label: 'URL', name: 'url', widget: 'string' },
+                  { label: 'Accessed date', name: 'accessed', widget: 'string' },
+                ],
+              },
+              { label: 'Content', name: 'body', widget: 'markdown' },
+            ],
+          },
+          {
+            name: 'reviews_uk',
+            label: 'Огляди (UK)',
+            folder: 'src/content/uk/reviews',
+            create: true,
+            slug: '{{slug}}',
+            extension: 'mdx',
+            format: 'frontmatter',
+            fields: [
+              { label: 'Заголовок', name: 'title', widget: 'string' },
+              { label: 'Опис', name: 'description', widget: 'text' },
+              { label: 'Дата', name: 'date', widget: 'datetime' },
+              { label: 'Автор', name: 'author', widget: 'string', default: 'Редакція PowerBackup Guide' },
+              { label: 'Категорія', name: 'category', widget: 'hidden', default: 'review' },
+              { label: 'Locale', name: 'locale', widget: 'hidden', default: 'uk' },
+              { label: 'Теги', name: 'tags', widget: 'list' },
+              { label: 'Рейтинг (0-10)', name: 'rating', widget: 'number', value_type: 'float', min: 0, max: 10 },
+              { label: 'Ціна (грн)', name: 'price_uah', widget: 'number', required: false },
+              { label: 'Категорія обладнання', name: 'equipment_category', widget: 'select', options: ['power-station', 'ups', 'generator', 'solar', 'powerbank'] },
+              { label: 'Посилання для купівлі', name: 'buy_url', widget: 'string', required: false },
+              { label: 'Зображення', name: 'image', widget: 'image', required: false },
+              {
+                label: 'Джерела',
+                name: 'sources',
+                widget: 'list',
+                fields: [
+                  { label: 'Назва джерела', name: 'text', widget: 'string' },
+                  { label: 'URL', name: 'url', widget: 'string' },
+                  { label: 'Дата перевірки', name: 'accessed', widget: 'string' },
+                ],
+              },
+              { label: 'Контент', name: 'body', widget: 'markdown' },
+            ],
+          },
+          {
+            name: 'reviews_en',
+            label: 'Reviews (EN)',
+            folder: 'src/content/en/reviews',
+            create: true,
+            slug: '{{slug}}',
+            extension: 'mdx',
+            format: 'frontmatter',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'text' },
+              { label: 'Date', name: 'date', widget: 'datetime' },
+              { label: 'Author', name: 'author', widget: 'string', default: 'PowerBackup Guide Editorial' },
+              { label: 'Category', name: 'category', widget: 'hidden', default: 'review' },
+              { label: 'Locale', name: 'locale', widget: 'hidden', default: 'en' },
+              { label: 'Tags', name: 'tags', widget: 'list' },
+              { label: 'Rating (0-10)', name: 'rating', widget: 'number', value_type: 'float', min: 0, max: 10 },
+              { label: 'Price (UAH)', name: 'price_uah', widget: 'number', required: false },
+              { label: 'Equipment category', name: 'equipment_category', widget: 'select', options: ['power-station', 'ups', 'generator', 'solar', 'powerbank'] },
+              { label: 'Buy URL', name: 'buy_url', widget: 'string', required: false },
+              { label: 'Image', name: 'image', widget: 'image', required: false },
+              {
+                label: 'Sources',
+                name: 'sources',
+                widget: 'list',
+                fields: [
+                  { label: 'Source title', name: 'text', widget: 'string' },
+                  { label: 'URL', name: 'url', widget: 'string' },
+                  { label: 'Accessed date', name: 'accessed', widget: 'string' },
+                ],
+              },
+              { label: 'Content', name: 'body', widget: 'markdown' },
+            ],
+          },
+        ],
+      },
+    });
+  </script>
+</body>
+</html>

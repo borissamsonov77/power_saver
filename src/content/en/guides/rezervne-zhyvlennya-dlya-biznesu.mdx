@@ -1,0 +1,98 @@
+---
+title: "Backup Power for Business: Where to Start"
+description: "Practical guide to choosing backup power for small businesses — cafés, shops, offices. Load calculation, equipment types, and critical safety requirements"
+date: "2024-02-15"
+author: "PowerBackup Guide Editorial"
+category: "guide"
+tags: ["business", "backup power", "generator", "UPS", "small business"]
+locale: "en"
+sources:
+  - text: "IEA — Energy Security for SMEs"
+    url: "https://www.iea.org/reports/energy-efficiency-2022"
+    accessed: "2024-02-15"
+  - text: "NFPA 110 — Standard for Emergency and Standby Power Systems"
+    url: "https://www.nfpa.org/codes-and-standards/all-codes-and-standards/nfpa-110"
+    accessed: "2024-02-15"
+  - text: "Schneider Electric — UPS selection for small business"
+    url: "https://www.se.com/ww/en/work/solutions/for-business/ups-uninterruptible-power-supply/"
+    accessed: "2024-02-15"
+  - text: "OSHA — Generator Safety"
+    url: "https://www.osha.gov/electric-power-generation/hazards/generators"
+    accessed: "2024-02-15"
+  - text: "Energy Star — UPS Purchasing Guide"
+    url: "https://www.energystar.gov/products/ups"
+    accessed: "2024-02-15"
+---
+
+Power outages for a business aren't just inconvenient — they mean lost revenue, spoiled inventory, and frustrated customers. Let's walk through how to choose backup power for your specific type of business.
+
+## Step 1: Identify Your Critical Load
+
+Before choosing equipment, you need to answer: **what absolutely must keep running** during an outage?
+
+### Typical Critical Systems:
+
+| System | Wattage | Priority |
+|--------|---------|----------|
+| POS terminal and register | 50–100W | Critical |
+| Router and Wi-Fi | 10–20W | Critical |
+| Server equipment | 200–500W | Critical |
+| Refrigerators (food/product) | 100–300W × count | Critical |
+| Minimum lighting | 100–300W | High |
+| Coffee machine / bar equipment | 500–1500W | Medium |
+
+**Practical approach:** List your appliances and mark which ones cannot be turned off. Calculate the total wattage of everything on the "cannot turn off" list.
+
+## Step 2: Assess Expected Outage Duration
+
+- **Up to 2 hours:** UPS can cover critical load
+- **2-8 hours:** Power station or generator needed
+- **8+ hours:** Generator or industrial energy storage required
+
+## Solutions by Business Type
+
+### Café or Bar
+
+**Minimal level (under $400):**
+- UPS 1,500 VA for POS + router: 2-4 hours of cash register operation
+- 500 Wh power station for main lighting
+
+**Optimal level ($800–$1,500):**
+- 2,000 Wh power station (EcoFlow DELTA Pro or similar)
+- Covers: register, router, lighting, small drinks fridge — 6-8 hours
+
+### Retail Store or Supermarket
+
+**Key challenge:** Freezer cases and refrigerators are the main load. Generator required.
+
+- **5-10 kW generator** + ATS (Automatic Transfer Switch)
+- UPS for cash registers and IT systems — to cover the generator startup gap (2-3 minutes)
+
+<SafetyWarning message="⚠️ Connecting a generator to a building's electrical system ALWAYS requires a licensed electrician via an Automatic Transfer Switch (ATS). Parallel connection to the grid without an ATS is life-threatening and may be illegal under local codes." />
+
+### Office
+
+**Priority:** Server equipment, PCs, VoIP phones.
+
+- **Server-grade UPS** with minimal transfer time (0 ms or &lt;10 ms)
+- Power station for charging laptops and mobile devices
+- Backup Starlink or 4G router for internet continuity
+
+## Safety and Regulatory Notes
+
+### What regulations typically require:
+
+1. **Generators must be installed outdoors** or in specially ventilated enclosures — check local fire and building codes
+2. **ATS is required** when connecting to a building's electrical system
+3. **Diesel generators** in multi-tenant buildings may require fire safety permits
+4. **Fuel storage** is regulated by local fire safety standards
+
+<SafetyWarning message="⚠️ Never run gasoline or diesel generators indoors, in basements, or in garages. Fatal carbon monoxide (CO) poisoning risk." />
+
+## Small Business Checklist
+
+- [ ] Identified critical load (list of appliances and wattages)
+- [ ] Determined maximum acceptable downtime
+- [ ] Consulted a licensed electrician about connection requirements
+- [ ] Checked local permit requirements for generator installation
+- [ ] Created a power failure procedure for staff

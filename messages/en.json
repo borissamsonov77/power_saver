@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "emergency": "No Power?",
+    "guides": "Guides",
+    "reviews": "Reviews",
+    "solutions": "Solutions",
+    "business": "For Business",
+    "about": "About"
+  },
+  "home": {
+    "hero_title": "Power Out? We Know What To Do",
+    "hero_subtitle": "Practical backup power solutions for homes, apartments and businesses during outages",
+    "cta_emergency": "No power right now — help me!",
+    "cta_solutions": "Find my solution",
+    "section_for_home": "For Home",
+    "section_for_business": "For Business",
+    "section_guides": "Popular Guides",
+    "section_reviews": "Equipment Reviews",
+    "quickNavTitle": "What are you looking for?",
+    "quickEmergencyTitle": "No Power Right Now",
+    "quickEmergencyDesc": "Step-by-step guide for the first hours without electricity",
+    "quickGuidesTitle": "Guides & How-Tos",
+    "quickGuidesDesc": "How to choose equipment, prepare for blackouts, and protect your devices",
+    "quickReviewsTitle": "Equipment Reviews",
+    "quickReviewsDesc": "Independent reviews of power stations, UPS units and generators",
+    "quickSolutionsTitle": "Ready-Made Solutions",
+    "quickSolutionsDesc": "Equipment selection by your budget and situation",
+    "whyTitle": "Why Trust Us",
+    "why1": "Information is based on official data and verified open sources",
+    "why2": "Every article includes source links — you can verify independently",
+    "why3": "No equipment is recommended without real testing or documented public reviews",
+    "why4": "All content is available in Ukrainian and English"
+  },
+  "emergency": {
+    "title": "Power Cut — What To Do Right Now",
+    "step1_title": "Check Safety First",
+    "step1_desc": "Unplug large appliances. Check your breaker panel — a tripped breaker may be the cause",
+    "step2_title": "Find Out Duration",
+    "step2_desc": "Check your utility provider's Telegram channel or website for outage schedules",
+    "step3_title": "Charge Your Phone",
+    "step3_desc": "Use a powerbank. Your phone is your lifeline for communication and information",
+    "step4_title": "Get Light",
+    "step4_desc": "Use a flashlight or headlamp — not candles (fire safety)",
+    "step5_title": "Keep Fridge Closed",
+    "step5_desc": "Unopened: fridge stays safe for 4 hours, freezer up to 48 hours",
+    "what_next": "What's Next?",
+    "guides_link": "Prep Guides",
+    "solutions_link": "Find Equipment"
+  },
+  "guides": {
+    "title": "Guides",
+    "subtitle": "Step-by-step instructions for blackout preparedness",
+    "read_more": "Read full guide",
+    "reading_time": "{time} min read",
+    "all_guides": "← All Guides",
+    "coming_soon": "Guides coming soon."
+  },
+  "reviews": {
+    "title": "Equipment Reviews",
+    "subtitle": "Independent reviews of power stations, generators and UPS units",
+    "read_more": "Read review",
+    "rating": "Rating",
+    "buy": "Buy",
+    "price_approx": "approx. price",
+    "all_reviews": "← All Reviews",
+    "coming_soon": "Reviews coming soon."
+  },
+  "solutions": {
+    "title": "Ready-Made Solutions",
+    "subtitle": "Equipment selection based on your situation and budget",
+    "for_home": "For Home",
+    "for_business": "For Business",
+    "budget_min": "Minimum budget",
+    "budget_mid": "Best value",
+    "budget_adv": "Maximum autonomy",
+    "home_desc": "Solutions for apartments and homes — from minimal kit to full autonomy",
+    "business_desc": "Solutions for cafes, shops, offices and small business — uninterrupted operation during outages"
+  },
+  "common": {
+    "sources": "Sources",
+    "sources_note": "Information verified from open sources. For critical decisions, we recommend consulting a qualified professional.",
+    "safety_warning": "⚠️ Warning: connecting generators and inverters to home wiring requires a licensed electrician. DIY wiring is dangerous and may violate local regulations.",
+    "affiliate_disclosure": "Some links on this page are affiliate links. This does not affect the objectivity of our reviews.",
+    "affiliate_full": "Learn about our affiliate policy",
+    "last_updated": "Updated",
+    "author": "Author",
+    "back_to": "Back to",
+    "table_of_contents": "Contents"
+  },
+  "footer": {
+    "tagline": "Practical backup power solutions",
+    "section_content": "Content",
+    "section_legal": "Legal",
+    "affiliate_disclosure": "Affiliate Disclosure",
+    "editorial_policy": "Editorial Policy",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 PowerBackup Guide. All rights reserved."
+  }
+}
