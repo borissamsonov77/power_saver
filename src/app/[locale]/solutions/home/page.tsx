@@ -99,7 +99,7 @@ const TIERS_EN = [
   },
 ];
 
-const SOURCES: Source[] = [
+const SOURCES_UK: Source[] = [
   {
     text: 'EcoFlow — офіційні характеристики RIVER 2 Pro і DELTA Pro',
     url: 'https://www.ecoflow.com/products/delta-pro-portable-power-station',
@@ -127,9 +127,33 @@ const SOURCES: Source[] = [
   },
 ];
 
+const SOURCES_EN: Source[] = [
+  {
+    text: 'EcoFlow — official specs for RIVER 2 Pro and DELTA Pro',
+    url: 'https://www.ecoflow.com/products/delta-pro-portable-power-station',
+    accessed: '2024-01-20',
+  },
+  {
+    text: 'Anker — Powerbank 737 specifications',
+    url: 'https://www.anker.com/products/anker-737-power-bank',
+    accessed: '2024-01-20',
+  },
+  {
+    text: 'Wirecutter — Best Portable Power Stations',
+    url: 'https://www.nytimes.com/wirecutter/reviews/best-portable-power-stations/',
+    accessed: '2024-01-20',
+  },
+  {
+    text: 'DTEK — outage schedules 2024 (Ukraine)',
+    url: 'https://www.dtek.com/outages',
+    accessed: '2024-01-20',
+  },
+];
+
 export default async function HomeSolutionsPage({ params }: Props) {
   const { locale } = params;
   const tiers = locale === 'uk' ? TIERS_UK : TIERS_EN;
+  const sources = locale === 'uk' ? SOURCES_UK : SOURCES_EN;
   const heading = locale === 'uk' ? 'Резервне живлення для дому і квартири' : 'Backup Power for Home & Apartment';
   const subheading = locale === 'uk'
     ? 'Три рівні готовності — обирайте під свій бюджет і потреби'
@@ -185,7 +209,7 @@ export default async function HomeSolutionsPage({ params }: Props) {
       </div>
 
       <div className="mt-8">
-        <SourceList sources={SOURCES} />
+        <SourceList sources={sources} />
       </div>
     </div>
   );

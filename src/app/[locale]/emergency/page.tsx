@@ -21,9 +21,9 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
-const EMERGENCY_SOURCES = [
+const EMERGENCY_SOURCES_UK = [
   {
-    text: 'ДТЕК — графіки відключень / DTEK — outage schedules',
+    text: 'ДТЕК — графіки відключень',
     url: 'https://www.dtek.com/outages',
     accessed: '2024-01-15',
   },
@@ -42,9 +42,27 @@ const EMERGENCY_SOURCES = [
     url: 'https://www.ready.gov/power-outages',
     accessed: '2024-01-15',
   },
+];
+
+const EMERGENCY_SOURCES_EN = [
   {
-    text: 'WHO — Candle safety and alternatives',
-    url: 'https://www.who.int/docs/default-source/documents/publications/occupational-health/occupational-health-5th-print.pdf',
+    text: 'DTEK — outage schedules (Ukraine)',
+    url: 'https://www.dtek.com/outages',
+    accessed: '2024-01-15',
+  },
+  {
+    text: 'State Agency on Energy Efficiency (SAEE) — power outage recommendations',
+    url: 'https://saee.gov.ua',
+    accessed: '2024-01-15',
+  },
+  {
+    text: 'Ukrainian Red Cross — emergency preparedness guide',
+    url: 'https://redcross.org.ua',
+    accessed: '2024-01-15',
+  },
+  {
+    text: 'FEMA — Food Safety During a Power Outage',
+    url: 'https://www.ready.gov/power-outages',
     accessed: '2024-01-15',
   },
 ];
@@ -100,6 +118,7 @@ export default function EmergencyPage({ params }: Props) {
   const { locale } = params;
   const t = useTranslations('emergency');
   const common = useTranslations('common');
+  const sources = locale === 'uk' ? EMERGENCY_SOURCES_UK : EMERGENCY_SOURCES_EN;
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
@@ -128,7 +147,7 @@ export default function EmergencyPage({ params }: Props) {
       </div>
 
       <div className="mt-10">
-        <SourceList sources={EMERGENCY_SOURCES} note={common('sources_note')} />
+        <SourceList sources={sources} note={common('sources_note')} />
       </div>
     </div>
   );

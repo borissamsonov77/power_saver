@@ -33,7 +33,7 @@ const BUSINESS_TIERS_UK = [
       { name: 'Зарядна станція 1000 Вт·год', note: 'освітлення + заряджання' },
       { name: 'LED-освітлення з акумулятором', note: 'аварійне освітлення' },
     ],
-    warningUk: 'Для підключення будь-якого обладнання до існуючої мережі зверніться до ліцензованого електрика.',
+    warning: 'Для підключення будь-якого обладнання до існуючої мережі зверніться до ліцензованого електрика.',
   },
   {
     id: 'medium',
@@ -47,7 +47,7 @@ const BUSINESS_TIERS_UK = [
       { name: 'ІБП для ПОС-термінали і каси', note: 'миттєвий захист платіжних систем' },
       { name: 'Дизель/газ — уточнюйте норми пожежної безпеки', note: 'дотримуйтесь ДБН' },
     ],
-    warningUk: 'Генератори в приміщеннях категорично заборонені. Встановлення АВР — тільки ліцензований електрик.',
+    warning: 'Генератори в приміщеннях категорично заборонені. Встановлення АВР — тільки ліцензований електрик.',
   },
   {
     id: 'large',
@@ -60,7 +60,7 @@ const BUSINESS_TIERS_UK = [
       { name: 'ДБЖ серверне обладнання', note: 'UPS для ІТ-інфраструктури' },
       { name: 'Аккумуляторний накопичувач (BESS)', note: 'пікова компенсація + аварійний резерв' },
     ],
-    warningUk: 'Проектування системи резервного живлення для промислових об\'єктів потребує ліцензованого проекту.',
+    warning: 'Проектування системи резервного живлення для промислових об\'єктів потребує ліцензованого проекту.',
   },
 ];
 
@@ -76,7 +76,7 @@ const BUSINESS_TIERS_EN = [
       { name: '1000 Wh power station', note: 'lighting + device charging' },
       { name: 'Battery-backup LED lighting', note: 'emergency illumination' },
     ],
-    warningUk: 'For connecting any equipment to the existing grid, consult a licensed electrician.',
+    warning: 'For connecting any equipment to the existing grid, consult a licensed electrician.',
   },
   {
     id: 'medium',
@@ -90,7 +90,7 @@ const BUSINESS_TIERS_EN = [
       { name: 'UPS for POS terminals and cash registers', note: 'instant protection for payment systems' },
       { name: 'Diesel/gas — verify local fire safety codes', note: 'comply with local regulations' },
     ],
-    warningUk: 'Never run generators indoors. ATS installation requires a licensed electrician.',
+    warning: 'Never run generators indoors. ATS installation requires a licensed electrician.',
   },
   {
     id: 'large',
@@ -103,7 +103,7 @@ const BUSINESS_TIERS_EN = [
       { name: 'Server-grade UPS', note: 'for IT infrastructure' },
       { name: 'Battery Energy Storage System (BESS)', note: 'peak compensation + emergency reserve' },
     ],
-    warningUk: 'Industrial backup power system design requires a licensed engineering project and permits.',
+    warning: 'Industrial backup power system design requires a licensed engineering project and permits.',
   },
 ];
 
@@ -182,7 +182,7 @@ export default async function BusinessSolutionsPage({ params }: Props) {
                 ))}
               </ul>
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-800">
-                ⚠️ {tier.warningUk}
+                ⚠️ {tier.warning}
               </div>
             </div>
           </div>
