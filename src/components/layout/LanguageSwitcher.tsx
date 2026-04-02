@@ -7,10 +7,18 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: 'uk
   const pathname = usePathname()
 
   function switchLocale(newLocale: 'uk' | 'en') {
-    // Replace the locale segment in the current path
-    const segments = pathname.split('/')
-    segments[1] = newLocale
-    return segments.join('/')
+    // Normalize pathname and replace the first segment (locale)
+    if (!pathname) return `/${newLocale}`
+    const parts = pathname.split('/').filter(Boolean) // removes empty segments
+    if (parts.length === 0) return `/${newLocale}`
+    // If the first segment is a locale, replace it, otherwise prepend
+    const knownLocales = ['uk', 'en']
+    if (knownLocales.includes(parts[0])) {
+      parts[0] = newLocale
+    } else {
+      parts.unshift(newLocale)
+    }
+    return `/${parts.join('/')}`
   }
 
   return (
