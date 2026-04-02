@@ -109,18 +109,18 @@ const BUSINESS_TIERS_EN = [
 
 const SOURCES: Source[] = [
   {
-    text: 'IEA — Electricity Supply Security Recommendations',
-    url: 'https://www.iea.org/reports/maintaining-power-system-reliability',
+    text: 'IEA — Electricity Supply Security',
+    url: 'https://www.iea.org',
     accessed: '2024-01-20',
   },
   {
     text: 'NFPA — Generator Safety Guidelines',
-    url: 'https://www.nfpa.org/resources/home-fire-safety/generators',
+    url: 'https://www.nfpa.org',
     accessed: '2024-01-20',
   },
   {
     text: 'EcoFlow — commercial power solutions',
-    url: 'https://www.ecoflow.com/commercial',
+    url: 'https://www.ecoflow.com',
     accessed: '2024-01-20',
   },
   {

@@ -102,12 +102,12 @@ const TIERS_EN = [
 const SOURCES_UK: Source[] = [
   {
     text: 'EcoFlow — офіційні характеристики RIVER 2 Pro і DELTA Pro',
-    url: 'https://www.ecoflow.com/products/delta-pro-portable-power-station',
+    url: 'https://www.ecoflow.com',
     accessed: '2024-01-20',
   },
   {
     text: 'Anker — Powerbank 737 технічні характеристики',
-    url: 'https://www.anker.com/products/anker-737-power-bank',
+    url: 'https://www.anker.com',
     accessed: '2024-01-20',
   },
   {
@@ -120,22 +120,17 @@ const SOURCES_UK: Source[] = [
     url: 'https://www.dtek.com/outages',
     accessed: '2024-01-20',
   },
-  {
-    text: 'Enerhiya.ua — огляди зарядних станцій для України',
-    url: 'https://enerhiya.ua',
-    accessed: '2024-01-20',
-  },
 ];
 
 const SOURCES_EN: Source[] = [
   {
     text: 'EcoFlow — official specs for RIVER 2 Pro and DELTA Pro',
-    url: 'https://www.ecoflow.com/products/delta-pro-portable-power-station',
+    url: 'https://www.ecoflow.com',
     accessed: '2024-01-20',
   },
   {
     text: 'Anker — Powerbank 737 specifications',
-    url: 'https://www.anker.com/products/anker-737-power-bank',
+    url: 'https://www.anker.com',
     accessed: '2024-01-20',
   },
   {
