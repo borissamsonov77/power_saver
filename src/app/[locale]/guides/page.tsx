@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function GuidesPage({ params }: Props) {
   const { locale } = params;
+  setRequestLocale(locale);
   const guides = await getAllGuides(locale as Locale);
 
   return (

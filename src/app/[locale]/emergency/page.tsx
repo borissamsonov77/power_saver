@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import SafetyWarning from '@/components/blocks/SafetyWarning';
@@ -116,6 +116,7 @@ function EmergencySteps() {
 
 export default function EmergencyPage({ params }: Props) {
   const { locale } = params;
+  setRequestLocale(locale);
   const t = useTranslations('emergency');
   const common = useTranslations('common');
   const sources = locale === 'uk' ? EMERGENCY_SOURCES_UK : EMERGENCY_SOURCES_EN;

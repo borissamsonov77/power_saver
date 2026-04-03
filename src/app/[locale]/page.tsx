@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import type { Locale } from '@/i18n/routing';
@@ -100,6 +100,7 @@ function WhyUsSection() {
 
 export default function HomePage({ params }: Props) {
   const { locale } = params;
+  setRequestLocale(locale);
   return (
     <>
       <HeroSection locale={locale} />

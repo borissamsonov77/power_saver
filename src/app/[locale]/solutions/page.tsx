@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function SolutionsPage({ params }: Props) {
   const { locale } = params;
+  setRequestLocale(locale);
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       <SolutionsHeader />
