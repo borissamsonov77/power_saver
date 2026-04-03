@@ -25,3 +25,42 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Prose table styles (no @tailwindcss/typography installed) */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.prose thead {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+.prose th {
+  padding: 0.625rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+.prose td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  vertical-align: top;
+}
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+.prose tbody tr:hover {
+  background-color: #f9fafb;
+}
+.prose ul li input[type='checkbox'] {
+  margin-right: 0.5rem;
+  accent-color: #16a34a;
+}

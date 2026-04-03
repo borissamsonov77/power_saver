@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import remarkGfm from 'remark-gfm';
 import { getContentBySlug, getAllGuides } from '@/lib/mdx';
 import { buildMetadata, articleJsonLd } from '@/lib/seo';
 import SourceList from '@/components/blocks/SourceList';
@@ -41,6 +42,7 @@ const mdxComponents = {
 
 export default async function GuideSlugPage({ params }: Props) {
   const { locale, slug } = params;
+  setRequestLocale(locale);
   const [item, t, tCommon] = await Promise.all([
     getContentBySlug(locale as Locale, 'guides', slug),
     getTranslations({ locale, namespace: 'guides' }),
@@ -79,7 +81,11 @@ export default async function GuideSlugPage({ params }: Props) {
       </header>
 
       <div className="prose prose-gray max-w-none">
-        <MDXRemote source={content} components={mdxComponents} />
+        <MDXRemote
+          source={content}
+          components={mdxComponents}
+          options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+        />
       </div>
 
       {meta.sources?.length > 0 && (
